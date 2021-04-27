@@ -85,14 +85,17 @@ submit {
   color: #d53f1e;
 }
 
+.border-bottom {
+  border-bottom: 1px solid #dddddd;
+}
+
+.border-bottom--blue {
+  border-bottom: 2px solid #2fc1da;
+}
+
 .search-bar__field {
   background-color: #caeff7;
   position: relative;
-}
-
-.search-bar__input {
-  width: 240px;
-  font-size: 10px;
 }
 
 .search-bar__loupe-btn {
@@ -134,21 +137,10 @@ submit {
   font-weight: lighter;
 }
 
-.entries-body__header {
-  height: 63px;
-  border-bottom: 2px solid #2fc1da;
-}
-
 .entries-tab:hover {
   background-color: #2fc1da;
   color: white;
   cursor: pointer;
-}
-
-.entry {
-  height: 17.55%;
-  padding-top: 15px;
-  border-bottom: 1px solid #dddddd;
 }
 
 .entry-extra-spec {

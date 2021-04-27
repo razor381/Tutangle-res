@@ -3,9 +3,22 @@ body {
   height: 100%;
 }
 
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .container {
   width: 70%;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 1400px) {
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
 }
 
 .w-full {
@@ -98,17 +111,40 @@ body {
 }
 
 /* helpers end */
+
 .main {
   height: 100%;
 }
 
+@media only screen and (max-width: 1000px) {
+  .main {
+    height: auto;
+  }
+}
+
+.header-top__left-content {
+  float: left;
+}
+
+.header-top__account {
+  float: right;
+  text-align: right;
+}
+
 .main-logo {
+  float: left;
   height: 85px;
 }
 
 .search-bar {
-  margin-top: 40px;
+  float: right;
+  margin: 40px 0 0 24px;
   width: 320px;
+}
+
+.search-bar__input {
+  width: 240px;
+  font-size: 10px;
 }
 
 .search-bar__btn {
@@ -148,39 +184,7 @@ body {
 }
 
 .header-top__account-actions {
-  margin-top: 6px;
   font-size: 10px;
-}
-
-.notif-icons {
-  margin-bottom: -3px;
-  margin-right: 5px;
-}
-
-.content {
-  height: 70%;
-  padding: 3.5% 0;
-}
-
-.search-section {
-  width: 20.46%;
-  height: 100%;
-}
-
-.search-section:first-child {
-  margin-left: 0;
-}
-
-.entries-section {
-  width: 57%;
-  margin-left: 1.9%;
-  height: 100%;
-}
-
-.video-section {
-  width: 18.56%;
-  height: 100%;
-  margin-left: 1.9%;
 }
 
 .header-bottom {
@@ -197,18 +201,139 @@ body {
   margin-left: 0;
 }
 
-.list-section__item {
-  padding: 12px;
+.notif-icons {
+  margin-bottom: -3px;
+  margin-right: 5px;
 }
 
-.list-section__item-icon img {
-  float: right;
-  width: 12px;
-  height: 12px;
+@media only screen and (max-width: 800px) {
+  .header-top {
+    padding-bottom: 32px;
+  }
+
+  .header-top__left-content,
+  .header-top__account,
+  .main-logo,
+  .search-bar {
+    float: none;
+    margin: auto;
+  }
+
+  .main-logo {
+    text-align: center;
+    padding: 48px 0;
+  }
+
+  .header-top__account {
+    text-align: center;
+    margin-top: 32px;
+  }
+
+  .header-top__account span {
+    font-size: 22px;
+  }
+
+  .header-top__account-actions {
+    margin-top: 16px;
+  }
+
+  .header-top__account-actions a {
+    padding: 0 16px;
+    font-size: 16px;
+  }
+
+  .header-bottom ul,
+  .header-bottom div,
+  .header-bottom li,
+  .header-bottom a {
+    font-size: 12px;
+    float: none;
+    display: block;
+    margin: auto;
+  }
+
+  .header-bottom span {
+    font-size: 12px;
+  }
+
+  .header-bottom {
+    height: auto;
+    text-align: center;
+  }
+
+  .header-bottom__right-navs {
+    border-top: 1px solid #dddddd;
+  }
+}
+
+.content {
+  height: 70%;
+  padding: 3.5% 0;
+}
+
+.search-section {
+  width: 20.46%;
+  height: 100%;
+  float: left;
+}
+
+.entries-section {
+  float: left;
+  width: 57%;
+  margin-left: 1.9%;
+  height: 100%;
+}
+
+.video-section {
+  float: left;
+  width: 18.56%;
+  height: 100%;
+  margin-left: 1.9%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .entries-section,
+  .search-section,
+  .video-section {
+    float: none;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .entries-section > h1 {
+    text-align: center;
+  }
+}
+
+.list-section__item {
+  padding: 12px;
+  position: relative;
+}
+
+@media only screen and (max-width: 800px) {
+  .list-section__item span,
+  .list-section__item p {
+    font-size: 12px;
+  }
+}
+
+.list-section__item-label {
+  display: block;
+  width: 85%;
+}
+
+.list-section__item-icon {
+  position: absolute;
+  top: 30%;
+  right: 6%;
 }
 
 .entries-body {
   height: 95.3%;
+}
+
+.entries-body__header {
+  height: 63px;
 }
 
 .entries-type {
@@ -216,6 +341,29 @@ body {
   height: 100%;
   float: left;
   position: relative;
+}
+
+.entries-type:last-of-type {
+  margin-left: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+  .entries-type {
+    float: none;
+    margin: auto;
+    width: 90%;
+    height: auto;
+  }
+
+  .entries-type:last-of-type {
+    margin: auto;
+    background: #f5f5f5;
+    border-top: 2px solid #2fc1da;
+  }
+
+  .entries-body__header {
+    height: 128px;
+  }
 }
 
 .entries-type:before {
@@ -255,11 +403,24 @@ body {
 
 .entries-tab {
   height: 100%;
-  width: 86%;
+  width: 70%;
   line-height: 28px;
   text-align: center;
   position: relative;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 1400px) {
+  .entries-tab span {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .entries-type__title span,
+  .entries-tab span {
+    font-size: 12px;
+  }
 }
 
 .entries-tab:before {
@@ -288,17 +449,65 @@ body {
   z-index: 10;
 }
 
+.entries-tab--active {
+  color: white;
+  background-color: #2fc1da;
+}
+
+.entries-tab--active:before {
+  content: url("../images/tab-rounded-active.png");
+  position: absolute;
+  left: -13px;
+}
+
+.entries-tab--active:after {
+  content: url("../images/tab-rounded-active-r.png");
+  position: absolute;
+  right: -13px;
+  z-index: 10;
+}
+
 .entries-body__content {
   height: 90.978%;
 }
 
+.entry {
+  height: 17.55%;
+  padding-top: 15px;
+}
+
 .entry-img {
   height: 82.35%;
+  float: left;
 }
 
 .entry-description-wrapper {
   margin-left: 10px;
   height: 82.35%;
+  float: left;
+}
+
+@media only screen and (max-width: 800px) {
+  .entries-body__content .entry:last-child {
+    border-bottom: none;
+  }
+
+  .entry {
+    height: 250px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .entry-img {
+    width: 150px;
+    height: 150px;
+    float: none;
+  }
+
+  .entry-description-wrapper {
+    margin-top: 20px;
+    float: none;
+  }
 }
 
 .entry-specs {
@@ -310,12 +519,48 @@ body {
   line-height: 42px;
 }
 
+.footer__left-section {
+  float: left;
+}
+
+.footer__right-section {
+  float: right;
+}
+
+.footer__left-section > div {
+  float: left;
+}
+
 .footer__dots {
   margin: 0 7px;
 }
 
-.clearfix:after {
-  content: "";
-  clear: both;
-  display: table;
+@media only screen and (max-width: 800px) {
+  .footer {
+    margin-top: 32px;
+    height: 100%;
+    padding: 32px 0;
+    text-align: center;
+  }
+
+  .footer__left-section {
+    float: none;
+  }
+
+  .footer__right-section {
+    float: none;
+  }
+
+  .footer__left-section > div {
+    float: none;
+  }
+
+  .footer__dots {
+    display: none;
+  }
+
+  .footer a,
+  .footer span {
+    font-size: 14px;
+  }
 }
