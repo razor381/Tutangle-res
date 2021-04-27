@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://kit.fontawesome.com/32f441d80c.js" crossorigin="anonymous"></script>
   <title>Tutangle</title>
 </head>
 <body>
@@ -77,8 +78,16 @@
     <div class="content">
       <div class="container clearfix h-full">
         <div class="search-section bg-gray-100">
-          <div>
-            <div class="list-section__header"><span>Recent Searches</span></div>
+          <div class="list-section__wrapper">
+            <div class="list-section__header">
+              <span>Recent Searches</span>
+            </div>
+            <div class="list-section__header-touch clearfix">
+              <span class="float-l">Recent Searches</span>
+              <span class="float-r mr-12">
+                <i class="fas fa-chevron-down fa-lg"></i>
+              </span>
+            </div>
             <div class="list-section__items">
               <div class="list-section__item">
                 <span>Nick Cave and the Bad Seeds</span>
@@ -90,8 +99,16 @@
               </div>
             </div>
           </div>
-          <div>
-            <div class="list-section__header"><span>Recent Searches</span></div>
+          <div class="list-section__wrapper">
+            <div class="list-section__header">
+              <span>Saved Searches</span>
+            </div>
+            <div class="list-section__header-touch clearfix">
+              <span class="float-l">Saved Searches</span>
+              <span class="float-r mr-12">
+                <i class="fas fa-chevron-down fa-lg"></i>
+              </span>
+            </div>
             <div class="list-section__items">
               <div class="list-section__item">
                 <span class="list-section__item-label">Different versions of the Tristan Und Isolde Prelude</span>
@@ -250,8 +267,16 @@
         </div>
 
         <div class="video-section bg-gray-100">
-          <div class="list-section__header"><span>Video Tutorials</span></div>
-          <div>
+          <div class="list-section__header">
+            <span>Video Tutorials</span>
+          </div>
+          <div class="list-section__header-touch clearfix">
+            <span class="float-l">Video Tutorials</span>
+            <span class="float-r mr-12">
+              <i class="fas fa-chevron-down fa-lg"></i>
+            </span>
+          </div>
+          <div class="list-section__items">
             <div class="list-section__item">
               <p>Overview of TuTangle</p>
             </div>
@@ -302,5 +327,6 @@
     </div>
 
   </div>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

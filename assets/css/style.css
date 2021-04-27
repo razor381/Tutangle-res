@@ -126,6 +126,35 @@ submit {
   font-size: 15px;
 }
 
+.list-section__header-touch {
+  display: none;
+  min-height: 32px;
+  line-height: 42px;
+  padding-left: 12px;
+  background-color: #2fc1da;
+  color: white;
+  cursor: pointer;
+}
+
+.list-section__header-touch span {
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 800px) {
+  .list-section__header,
+  .list-section__items {
+    display: none;
+  }
+
+  .list-section__header-touch {
+    display: block;
+  }
+
+  .list-section__header-touch:nth-of-type(2) {
+    margin-top: 4px;
+  }
+}
+
 .list-section__item:hover {
   background: white;
   cursor: pointer;

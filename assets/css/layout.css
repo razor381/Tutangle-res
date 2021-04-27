@@ -81,6 +81,10 @@ body {
   margin-left: 32px;
 }
 
+.mr-12 {
+  margin-right: 12px;
+}
+
 .px-32 {
   padding-left: 32px;
   padding-right: 32px;
@@ -298,6 +302,7 @@ body {
     float: none;
     width: 100%;
     margin-bottom: 32px;
+    margin-left: auto;
   }
 
   .entries-section > h1 {
@@ -310,13 +315,6 @@ body {
   position: relative;
 }
 
-@media only screen and (max-width: 800px) {
-  .list-section__item span,
-  .list-section__item p {
-    font-size: 12px;
-  }
-}
-
 .list-section__item-label {
   display: block;
   width: 85%;
@@ -326,6 +324,13 @@ body {
   position: absolute;
   top: 30%;
   right: 6%;
+}
+
+@media only screen and (max-width: 800px) {
+  .list-section__item span,
+  .list-section__item p {
+    font-size: 12px;
+  }
 }
 
 .entries-body {
