@@ -1,13 +1,10 @@
-html {
+html,
+body {
   height: 100%;
 }
 
-body {
-  min-height: 100%;
-}
-
 .container {
-  width: 940px;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -100,6 +97,11 @@ body {
   text-align: center;
 }
 
+/* helpers end */
+.main {
+  height: 100%;
+}
+
 .main-logo {
   height: 85px;
 }
@@ -156,14 +158,13 @@ body {
 }
 
 .content {
-  height: 667px;
-  padding-top: 30px;
+  height: 70%;
+  padding: 3.5% 0;
 }
 
 .search-section {
-  width: 194px;
-  height: 605px;
-  margin-left: 26px;
+  width: 20.46%;
+  height: 100%;
 }
 
 .search-section:first-child {
@@ -171,15 +172,15 @@ body {
 }
 
 .entries-section {
-  width: 518px;
-  height: 605px;
-  margin-left: 26px;
+  width: 57%;
+  margin-left: 1.9%;
+  height: 100%;
 }
 
 .video-section {
-  width: 176px;
-  height: 605px;
-  margin-left: 26px;
+  width: 18.56%;
+  height: 100%;
+  margin-left: 1.9%;
 }
 
 .header-bottom {
@@ -197,32 +198,23 @@ body {
 }
 
 .list-section__item {
-  padding: 9.6px 10px;
-  position: relative;
+  padding: 12px;
 }
 
-.list-section__item p {
-  width: 150px;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.list-section__item-icon {
-  position: absolute;
-  right: 14px;
-  bottom: 10px;
-  z-index: 50;
+.list-section__item-icon img {
+  float: right;
+  width: 12px;
+  height: 12px;
 }
 
 .entries-body {
-  height: 560px;
+  height: 95.3%;
 }
 
 .entries-type {
-  width: 258px;
+  width: 49.8%;
   height: 100%;
   float: left;
-  position: relative;
   position: relative;
 }
 
@@ -246,19 +238,28 @@ body {
   line-height: 35px;
 }
 
-.entries-tab-wrapper {
-  height: 28px;
-  width: 114px;
-  margin-left: 10px;
-}
-
 .background-element {
   position: absolute;
   top: 0;
-  left: 10px;
-  width: 236px;
+  left: 13px;
+  right: 13px;
   height: 100%;
   z-index: -10;
+}
+
+.entries-tab-wrapper {
+  height: 28px;
+  width: 46%;
+  margin-left: 10px;
+}
+
+.entries-tab {
+  height: 100%;
+  width: 86%;
+  line-height: 28px;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
 }
 
 .entries-tab:before {
@@ -287,15 +288,21 @@ body {
   z-index: 10;
 }
 
-.entry-img {
-  height: 70px;
-  width: 70px;
+.entries-body__content {
+  height: 90.978%;
 }
 
-.entry-description {
-  width: 438px;
-  height: 100%;
+.entry-img {
+  height: 82.35%;
+}
+
+.entry-description-wrapper {
   margin-left: 10px;
+  height: 82.35%;
+}
+
+.entry-specs {
+  margin-top: 2px;
 }
 
 .footer {
