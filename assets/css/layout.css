@@ -126,6 +126,27 @@ body {
   }
 }
 
+.header {
+  position: relative;
+}
+
+.burger-icon {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  display: none;
+}
+
+.hidden-menu {
+  z-index: 200;
+  position: absolute;
+  top: 13%;
+  right: 5%;
+  text-align: center;
+  width: 90%;
+  display: none;
+}
+
 .header-top__left-content {
   float: left;
 }
@@ -330,6 +351,14 @@ body {
   .list-section__item span,
   .list-section__item p {
     font-size: 12px;
+  }
+
+  .header-bottom {
+    display: none;
+  }
+
+  .burger-icon {
+    display: inline;
   }
 }
 

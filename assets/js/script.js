@@ -1,4 +1,5 @@
 const headerEls = document.querySelectorAll(".list-section__header-touch");
+const burgerEl = document.querySelector(".burger-icon");
 
 if (headerEls) {
   headerEls.forEach((header) =>
@@ -13,4 +14,14 @@ if (headerEls) {
       }
     })
   );
+}
+
+if (burgerEl) {
+  burgerEl.addEventListener("click", () => {
+    const menu = document.querySelector(".hidden-menu");
+    if (menu) {
+      const { display } = menu.style;
+      menu.style.display = display === "block" ? "none" : "block";
+    }
+  });
 }
